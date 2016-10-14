@@ -1,5 +1,7 @@
 module Admin
   class ArticlesController < ApplicationController
+    layout 'admin'
+
     def new
       @article = Article.new
     end
