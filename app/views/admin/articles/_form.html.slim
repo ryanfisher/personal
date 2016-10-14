@@ -1,0 +1,5 @@
+= form_for [:admin, @article] do |f|
+  = f.text_field :title
+  = f.text_field :slug
+  = f.text_area :body
+  = f.submit action_name.capitalize
