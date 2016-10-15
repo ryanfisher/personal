@@ -1,5 +1,6 @@
 = bootstrap_form_for [:admin, @article] do |f|
   = f.text_field :title
   = f.text_field :slug
+  = f.collection_select :category_id, Category.all, :id, :name
   = f.text_area :body
   = f.submit
