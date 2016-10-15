@@ -23,9 +23,9 @@ RSpec.describe Category, type: :model do
     end
 
     context 'when name includes spaces' do
-      let(:name) { 'philo sophy' }
+      let(:name) { 'computer science' }
 
-      it { is_expected.to_not be_valid }
+      it { is_expected.to be_valid }
     end
 
     context 'when name is empty' do
