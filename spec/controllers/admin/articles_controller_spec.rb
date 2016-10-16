@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Admin::ArticlesController, type: :controller do
+  describe 'GET index' do
+    before { get :index }
+
+    it_behaves_like 'a standard get request'
+  end
+
   describe 'GET new' do
     before { get :new }
 

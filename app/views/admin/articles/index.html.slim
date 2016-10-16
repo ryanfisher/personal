@@ -1,0 +1,7 @@
+.container
+  .row
+    .col-sm-12
+      ul
+        - @articles.each do |article|
+          li
+            = link_to edit_admin_article_path(article), article.title

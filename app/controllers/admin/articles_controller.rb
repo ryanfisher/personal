@@ -2,6 +2,10 @@ module Admin
   class ArticlesController < ApplicationController
     layout 'admin'
 
+    def index
+      @articles = Article.all
+    end
+
     def new
       @article = Article.new
     end
