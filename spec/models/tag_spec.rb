@@ -3,10 +3,12 @@ require 'rails_helper'
 RSpec.describe Tag, type: :model do
   subject { described_class.new(name: name) }
 
+  let(:name) { 'philosophy' }
+
+  it { should respond_to :articles }
+
   describe 'validations' do
     context 'when name is all lowercase letters' do
-      let(:name) { 'philosophy' }
-
       it { is_expected.to be_valid }
     end
 
