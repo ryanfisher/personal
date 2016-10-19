@@ -20,6 +20,8 @@ module Admin
     end
 
     def update
+      Article.find(params[:id]).update(article_params)
+      redirect_to admin_articles_path
     end
 
     private

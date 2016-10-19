@@ -36,4 +36,22 @@ RSpec.describe Admin::ArticlesController, type: :controller do
       expect(response.status).to be 302
     end
   end
+
+  describe 'PUT update' do
+    let(:category)           { Category.create!(name: 'philosophy')           }
+    let(:article_attributes) { { title: 'A Title', category_id: category.id } }
+
+    before do
+      @article = Article.create!(title: 'Old Title', category_id: category.id)
+      put :update, params: { article: article_attributes, id: @article.id }
+    end
+
+    it 'should update the article with the expected attributes' do
+      expect(Article.find(@article.id).title).to eq 'A Title'
+    end
+
+    it 'should redirect to index' do
+      expect(response.status).to be 302
+    end
+  end
 end
