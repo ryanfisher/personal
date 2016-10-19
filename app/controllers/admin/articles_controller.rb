@@ -15,9 +15,17 @@ module Admin
     end
 
     def create
+      Article.create!(article_params)
+      redirect_to admin_articles_path
     end
 
     def update
+    end
+
+    private
+
+    def article_params
+      params.require(:article).permit(:title, :slug, :body, :category_id)
     end
   end
 end
