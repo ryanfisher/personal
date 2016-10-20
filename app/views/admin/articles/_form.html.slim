@@ -3,4 +3,5 @@
   = f.text_field :slug
   = f.collection_select :category_id, Category.all, :id, :name
   = f.text_area :body
+  = f.check_box :published
   = f.submit

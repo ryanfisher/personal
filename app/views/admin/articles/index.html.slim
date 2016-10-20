@@ -1,7 +1,11 @@
 .container
   .row
     .col-sm-12
+      h1 Articles
+  .row
+    .col-sm-12
       ul
+        li = link_to '+ New article', new_admin_article_path
         - @articles.each do |article|
           li
-            = link_to edit_admin_article_path(article), article.title
+            = link_to article.title, edit_admin_article_path(article)
