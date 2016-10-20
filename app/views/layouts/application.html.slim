@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Personal
+    = csrf_meta_tags
+    = favicon_link_tag 'einstein.jpg'
+    style type='text/css' = Rails.application.assets.find_asset('application.css').to_s
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body
+    = yield
