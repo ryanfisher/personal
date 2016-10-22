@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'slim'
 gem 'bootstrap_form'
+gem 'redcarpet'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

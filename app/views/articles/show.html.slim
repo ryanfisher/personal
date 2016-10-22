@@ -1,2 +1,2 @@
 h1 = article.title
-= article.body
+= sanitize(markdown.render(article.body))
