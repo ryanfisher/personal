@@ -1,19 +1,14 @@
 $main-blue: #03406a;
 
 body {
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: center;
-}
+  font: 1.2em/1.62em sans-serif;
+  margin: 1em auto;
+  padding: 0 .62em;
+  max-width: 700px;
 
-.container {
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: left;
-}
+  h1, h2, h3 {line-height:1.2em;}
 
-h1 {
-  font-size: 30px;
-  font-weight: 100;
+  .profile { font-family: monospace; }
+
+  @media print{body{max-width:none}}
 }

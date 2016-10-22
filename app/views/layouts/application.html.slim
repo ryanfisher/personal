@@ -1,11 +1,13 @@
 doctype html
 html
   head
+    meta name="viewport" content="width=device-width, initial-scale=1"
     title Personal
     = csrf_meta_tags
     = favicon_link_tag 'einstein.jpg'
-    style type='text/css' = Rails.application.assets.find_asset('application.css').to_s
+    style type='text/css' = raw Rails.application.assets.find_asset('application.css').to_s
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-    = yield
+    .container
+      = yield
