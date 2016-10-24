@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Admin::ArticlesController, type: :controller do
+  login_user
+
   describe 'GET index' do
     before { get :index }
 

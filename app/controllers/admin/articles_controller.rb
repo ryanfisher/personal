@@ -1,5 +1,5 @@
 module Admin
-  class ArticlesController < ApplicationController
+  class ArticlesController < AdminController
     layout 'admin'
 
     def index
